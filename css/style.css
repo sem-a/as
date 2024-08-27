@@ -2,6 +2,13 @@
     --light: #e2e2e2;
     --dark: #3a3555;
 }
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f8f8f8;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+}
 
 body {
     background-color: #f8f8f8;
@@ -49,6 +56,7 @@ a:hover .btn p {
 }
 
 h2.title {
+    padding: 0 2px;
     font-size: 64px;
     font-weight: 700;
     text-align: justify;
@@ -154,8 +162,71 @@ h2.welcome__subtitle {
 
 /* portfolio */
 
+.portfolio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.portfolio__cards {
+    display: flex;
+    flex-wrap: nowrap; /* Обеспечивает, чтобы карточки не переносились на новую строку */
+    align-items: flex-end;
+    overflow-x: auto; /* Добавляет горизонтальную прокрутку, если карточки не помещаются в контейнер */
+    gap: 2px; /* Расстояние между карточками */
+    flex-grow: 1;
+    padding: 41px 2px 2px 2px;
+}
+/*Убрать полосу прокрутки у элемента*/
+.portfolio__cards::-webkit-scrollbar {
+    width: 0;
+}
 
-
+.portfolio-card {
+    flex: 0 0 auto;
+    width: 508px;
+    height: 508px;
+    border: 2px solid black;
+    transition: all 0.5s ease 0s;
+}
+.portfolio-card:hover {
+    background-color: #e1e1e1;
+    transition: all 0.5s ease 0s;
+}
+.card-container {
+    padding: 42px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.card-title h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 21px;
+}
+.arrow {
+    position: relative;
+    width: calc(100% - 5px);
+    height: 2px;
+    background-color: black;
+}
+.arrow::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translate(calc(-100% + 5px), calc(-50% + 1px));
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 16px solid black;
+}
 /*************/
 
 /* contact */
@@ -211,45 +282,62 @@ a.contact-link:hover {
 /* darkmode */
 
 body.darkmode {
-    background-color: #1F1C2F;
+    background-color: #1f1c2f;
     transition: all 0.5s ease 0s;
 }
 body.darkmode .text {
     color: #f8f8f8;
-} 
+}
 body.darkmode h1.title {
-    color: #6854D1;
+    color: #6854d1;
 }
 body.darkmode h2.welcome__subtitle {
-    color: #6854D1;
+    color: #6854d1;
 }
 
 body.darkmode .btn {
-    border: 2px solid #6854D1;
+    border: 2px solid #6854d1;
 }
 body.darkmode .btn p {
-    background-color: #6854D1;
+    background-color: #6854d1;
 }
 
 body.darkmode h2.title {
     color: #f8f8f8;
 }
 body.darkmode h2.title span {
-    color: #6854D1;
+    color: #6854d1;
 }
 
 body.darkmode a.contact-link {
     color: #f8f8f8;
 }
 body.darkmode a.contact-link:hover {
-    color: #6854D1;
+    color: #6854d1;
 }
 
 body.darkmode .footer {
     border-top: 1px solid #f8f8f8;
 }
+body.darkmode .portfolio-card {
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease 0s;
+}
+body.darkmode .portfolio-card:hover {
+    background-color: rgba(105, 84, 209, 0.20);
+    border: 2px solid #6854d1;
+    transition: all 0.5s ease 0s;
+}
+body.darkmode .card-title h3 {
+    color: #f8f8f8;
+}
+body.darkmode .arrow {
+    background-color: #f8f8f8;
+}
+body.darkmode .arrow::after {
+    border-left: 16px solid #f8f8f8;
+}
 /************/
-
 
 /* адаптив */
 
@@ -325,5 +413,34 @@ body.darkmode .footer {
     }
     .footer__items {
         gap: 14px;
+    }
+    .portfolio {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2px; /* Расстояние между карточками */
+        padding: 41px 2px 2px 2px;
+    }
+    .portfolio-card {
+        width: calc(100vw - 4px);
+        height: calc(100vw - 4px);
+        border: 2px solid black;
+        transition: all 0.5s ease 0s;
+    }
+    .card-container {
+        padding: 21px;
+    }
+    .card-logo img {
+        width: 63px;
+        height: 63px;
+    }
+    .card-title h3 {
+        margin-left: 14px;
     }
 }
