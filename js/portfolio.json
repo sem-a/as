@@ -1,0 +1,53 @@
+{
+    "portfolio": [
+        {
+            "id": 0,
+            "imgPath": "./img/nasmoovi.png",
+            "title": "Nasmoovi",
+            "description": "Nasmoovi - сайт свадебного фотографа с удобной административной панелью для управления контентом, портфолио и общения с клиентами. Простой и стильный интерфейс для просмотра работ и бронирования услуг.",
+            "link": "https://wed.nasmoovi.ru/"
+        },
+        {
+            "id": 1,
+            "imgPath": "./img/github.png",
+            "title": "MealSearch",
+            "description": "MealSearch - приложение для поиска рецептов по ингредиентам. Найдите вдохновение для готовки из того, что есть под рукой. Создавайте вкусные блюда легко и быстро с MealSearch.",
+            "link": "https://github.com/sem-a/meal-search"
+        },
+        {
+            "id": 2,
+            "imgPath": "./img/figma.png",
+            "title": "BarberShop",
+            "description": "Сайт барбершопа",
+            "link": "https://www.figma.com/design/aEszBmHFXUcelEjXxYj2cF/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9-%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF?node-id=0-1&t=8NAWMKZk6piA5FUN-1"
+        },
+        {
+            "id": 3,
+            "imgPath": "./img/github.png",
+            "title": "a1-test",
+            "description": "Тестовое задание пере собеседование на должность Frontend-разработчика",
+            "link": "https://github.com/sem-a/a1-test/tree/main"
+        },
+        {
+            "id": 4,
+            "imgPath": "./img/figma.png",
+            "title": "Blog",
+            "description": "Дизайн макет для блога",
+            "link": "https://www.figma.com/design/HMzRdLHLsxC6KaYsWp1p5b/%3C%2Fblog%3E?node-id=0-1&t=98ZQGD9mDwKuWoDd-1"
+        },
+        {
+            "id": 5,
+            "imgPath": "./img/github.png",
+            "title": "Approx",
+            "description": "Апроксимация непрерывной модели мультивибратора моделью с конечным множеством состояний. Подробнее можно прочитать в работе перейдя по ссылке",
+            "link": "https://github.com/sem-a/approx" 
+        },
+        {
+            "id": 6,
+            "imgPath": "./img/github.png",
+            "title": "Beauty Courses",
+            "description": "Сайт курсов в индустрии красоты",
+            "link": "https://github.com/sem-a/beauty-courses" 
+        }
+    ]
+}

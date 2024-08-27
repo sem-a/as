@@ -60,10 +60,9 @@ const createPortfolioCard = (data) => {
 
     // Добавление карточки в тело документа
     cardsContainer.appendChild(portfolioCard);
-    console.log(data)
 }
 
-const data = fetch('../data/portfolio.json')
+const data = fetch('js/portfolio.json')
     .then((response) => response.json())
     .then((json) => {
         for (let i = 0; i < json.portfolio.length; i++) {
