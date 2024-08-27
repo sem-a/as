@@ -293,7 +293,7 @@ body.darkmode .footer {
 }
 @media screen and (max-width: 520px) {
     .welcome {
-        padding-top: 42px;
+        padding-top: 14px;
     }
     h2.welcome__subtitle {
         left: 100%;
@@ -311,7 +311,7 @@ body.darkmode .footer {
         object-fit: cover;
     }
     .welcome__content {
-        margin-top: 35px;
+        margin-top: 21px;
         width: 280px;
     }
     .darkmode__btn {
