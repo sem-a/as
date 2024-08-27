@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>aleksey semikov</title>
+    </head>
+    <body>
+        <main>
+            <div class="welcome">
+                <div class="welcome__title">
+                    <h1 class="title">aleksey</h1>
+                    <h2 class="welcome__subtitle">semikov</h2>
+                </div>
+                <div class="welcome__img">
+                    <img src="./img/img_welc.png" alt="man" id="welcomeImage" />
+                </div>
+                <div class="container">
+                    <div class="welcome__content">
+                        <p class="text welcome__content-text">
+                            Давай создадим сайт, который будет отображать вашу
+                            индивидуальность
+                        </p>
+                        <a href="#contact">
+                            <div class="btn">
+                                <p>Связаться</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="darkmode__btn">
+                        <p class="text darkmode-text">Нужна темная тема?</p>
+                        <label id="darkmodeButtonContainer">
+                            <input
+                                id="darkmodeButton"
+                                type="checkbox"
+                                checked
+                            />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio">
+                <h2 class="title">
+                    за год работы в веб-разработке я приобрел
+                    <span
+                        >ценный опыт, который готов применить в новых
+                        проектах.</span
+                    >
+                </h2>
+            </div>
+            <div class="contact" id="contact">
+                <h2 class="title">
+                    я помогу воплотить ваши идеи в современный
+                    <span
+                        >и привлекательный веб-сайт. связаться со мной можно
+                        здесь:</span
+                    >
+                </h2>
+                <div class="contact__items">
+                    <a href="#" class="contact-link">hh.ru</a>
+                    <a href="#" class="contact-link">telegram.org</a>
+                    <a href="#" class="contact-link">vk.com</a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer__items">
+                    <p class="text">aleksey semikov</p>
+                    <p class="text">all rights reserved©</p>
+                    <p class="text">2023-2024</p>
+                </div>
+            </div>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

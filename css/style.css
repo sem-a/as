@@ -1,0 +1,329 @@
+:root {
+    --light: #e2e2e2;
+    --dark: #3a3555;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: "Inter", sans-serif;
+    transition: all 0.5s ease 0s;
+    overflow-x: hidden;
+}
+.container {
+    padding: 0 105px;
+}
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+.btn {
+    width: 80%;
+    height: 50px;
+    position: relative;
+    font-size: 16px;
+    border: 2px solid black;
+    padding: 17px 0;
+    text-transform: uppercase;
+    border-radius: 30px;
+    color: white;
+    margin-top: 21px;
+}
+.btn p {
+    display: inline;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(0%);
+    background-color: black;
+    border-radius: 30px;
+    height: 100%;
+    padding: 12px 32px;
+    transition: all 0.5s ease 0s;
+}
+
+a:hover .btn p {
+    left: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease 0s;
+}
+
+h2.title {
+    font-size: 64px;
+    font-weight: 700;
+    text-align: justify;
+    padding-top: 63px;
+    color: #aaaaaa;
+}
+h2.title span {
+    color: black;
+}
+
+/* welcome */
+
+.welcome {
+    padding-top: 135px;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.welcome__title {
+    position: relative;
+    font-weight: 700;
+    font-size: 128px;
+    z-index: 10;
+}
+h1.title {
+    color: #aaaaaa;
+}
+h2.welcome__subtitle {
+    position: absolute;
+    top: 128px;
+    left: 101px;
+}
+.welcome__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70vw;
+}
+.welcome__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.welcome__content {
+    margin-top: 250px;
+    width: 280px;
+}
+.darkmode__btn {
+    position: absolute;
+    left: 105px;
+    bottom: 75px;
+}
+
+.darkmode__btn label {
+    position: absolute;
+    width: 63px;
+    height: 35px;
+    background-color: var(--dark);
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.darkmode__btn input {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.darkmode__btn input:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    box-shadow: inset 10px 0px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+.darkmode__btn input:checked ~ .slider::before {
+    transform: translateX(100%);
+    background-color: var(--dark);
+    box-shadow: none;
+}
+
+/***********/
+
+/* portfolio */
+
+
+
+/*************/
+
+/* contact */
+
+.contact {
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 42px;
+    flex-grow: 1;
+}
+
+a.contact-link {
+    font-size: 48px;
+    font-weight: 700;
+    color: #aaaaaa;
+    transition: all 0.5s ease 0s;
+}
+a.contact-link:hover {
+    color: black;
+    transition: all 0.5s ease 0s;
+}
+
+/************/
+
+/* footer */
+
+.footer {
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+}
+.footer__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+/***********/
+
+/* darkmode */
+
+body.darkmode {
+    background-color: #1F1C2F;
+    transition: all 0.5s ease 0s;
+}
+body.darkmode .text {
+    color: #f8f8f8;
+} 
+body.darkmode h1.title {
+    color: #6854D1;
+}
+body.darkmode h2.welcome__subtitle {
+    color: #6854D1;
+}
+
+body.darkmode .btn {
+    border: 2px solid #6854D1;
+}
+body.darkmode .btn p {
+    background-color: #6854D1;
+}
+
+body.darkmode h2.title {
+    color: #f8f8f8;
+}
+body.darkmode h2.title span {
+    color: #6854D1;
+}
+
+body.darkmode a.contact-link {
+    color: #f8f8f8;
+}
+body.darkmode a.contact-link:hover {
+    color: #6854D1;
+}
+
+body.darkmode .footer {
+    border-top: 1px solid #f8f8f8;
+}
+/************/
+
+
+/* адаптив */
+
+@media screen and (max-width: 1525px) {
+    .welcome__img {
+        height: 100vh;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .welcome__img {
+        height: 100vh;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    h2.title {
+        font-size: 32px;
+    }
+    a.contact-link {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 21px;
+    }
+    .welcome__title {
+        font-size: 72px;
+    }
+    h2.welcome__subtitle {
+        top: 72px;
+        left: 72px;
+    }
+    .darkmode__btn {
+        left: 21px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .welcome {
+        padding-top: 42px;
+    }
+    h2.welcome__subtitle {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    .welcome__img {
+        position: relative;
+        width: 100vw;
+        height: 40vh;
+        margin-top: 83px;
+    }
+    .welcome__img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .welcome__content {
+        margin-top: 35px;
+        width: 280px;
+    }
+    .darkmode__btn {
+        position: absolute;
+        left: 21px;
+        bottom: 61px;
+    }
+    .contact__items {
+        flex-direction: column;
+        gap: 21px;
+    }
+    .footer__items {
+        gap: 14px;
+    }
+}
