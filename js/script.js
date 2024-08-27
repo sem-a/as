@@ -18,8 +18,10 @@ const createPortfolioCard = (data) => {
     const portfolioCard = document.createElement('div');
     portfolioCard.className = 'portfolio-card';
 
-    const cardContainer = document.createElement('div');
+    const cardContainer = document.createElement('a');
     cardContainer.className = 'card-container';
+    cardContainer.href = data.link;
+    cardContainer.target = '_blank';
 
     const cardTitle = document.createElement('div');
     cardTitle.className = 'card-title';
